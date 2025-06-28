@@ -27,3 +27,7 @@ Batch data insertion
 Vector similarity search with IP (Inner Product) metric
 
 ![image](https://github.com/user-attachments/assets/0e383d94-84d9-4e39-89b0-2a03209d1b1d)
+
+To run:
+pip install fastapi uvicorn python-multipart pandas pymilvus cohere python-dotenv httpx
+uvicorn main:app --reload --host 0.0.0.0 --port 8000
