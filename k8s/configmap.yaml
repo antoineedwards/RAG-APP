@@ -1,0 +1,9 @@
+# configmap.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: rag-config
+  namespace: rag-app
+data:
+  BACKEND_URL: "http://rag-backend-service:8000"
+  ENVIRONMENT: "production"
