@@ -31,3 +31,34 @@ Vector similarity search with IP (Inner Product) metric
 To run:
 pip install fastapi uvicorn python-multipart pandas pymilvus cohere python-dotenv httpx
 uvicorn main:app --reload --host 0.0.0.0 --port 8000
+
+
+Structure
+
+cohere-rag-app/
+│
+├── .gitignore
+├── .env.example
+│
+├── backend/
+│   ├── Dockerfile
+│   ├── requirements.txt
+│   └── main.py              # We'll put all backend logic here for now
+│
+├── frontend/
+│   ├── Dockerfile
+│   ├── package.json
+│   └── src/
+│       └── app/
+│           ├── globals.css
+│           ├── layout.tsx
+│           └── page.tsx     # All frontend logic can start here
+│
+└── k8s/                     # A simplified, flat structure for now
+    ├── namespace.yaml
+    ├── secret.yaml
+    ├── backend-deployment.yaml
+    ├── backend-service.yaml
+    ├── frontend-deployment.yaml
+    ├── frontend-service.yaml
+    └── ingress.yaml
