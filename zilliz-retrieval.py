@@ -1,3 +1,5 @@
+#pip install pymilvus langchain-cohere langchain-community
+
 from typing import Any, List, Dict, Optional
 import uuid
 import logging
